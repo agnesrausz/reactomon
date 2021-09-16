@@ -10,6 +10,7 @@ function PokemonList() {
 
     const [pokemons, setPokemons] = useState([]);
     const [pictures, setPictures] = useState([]);
+    const [types, setTypes] = useState([]);
 
     useEffect(() => {
         fetchPokemons();
@@ -23,16 +24,19 @@ function PokemonList() {
         setPokemons(pokeList);
 
         for (let i = 0; i < pokeList.length; i++) {
-            fetchPokemon(pokeList[i].url);
+            await fetchPokemon(pokeList[i].url);
         }
     }
 
 
     const fetchPokemon = async (url) => {
         const poke = await axios.get(url);
+        console.log(url)
         let image = poke.data.sprites.other["official-artwork"].front_default;
+        let type = poke.data.types[0].type.name;
 
         setPictures(state => [...state, image])
+        setTypes(state => [...state, type])
 
     }
 
@@ -45,7 +49,9 @@ function PokemonList() {
                     <Link style={pokeStyle} to={`/pokemon/${index + 1}`}>
                         <img className='img-list' src={pictures[index]} alt={pokemon.name}/>
                         <h3>{pokemon.name}</h3>
+                        <p>{types[index]}</p>
                     </Link>
+
                 </li>
             ))}
         </ul>
