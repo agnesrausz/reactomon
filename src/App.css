@@ -57,6 +57,7 @@ nav {
     border-width: thick;
     border-color: black;
     border-radius: 50%;
+    text-decoration: none;
 }
 
 .pokemon-list {
@@ -120,8 +121,25 @@ nav {
 
 }
 
-
-.card {
-    background: var(--background-color);
+.poke-link-style {
+    color: black;
+    text-decoration: none;
 }
 
+.card{
+    background: var(--background-color);
+    border-radius: 20%;
+    padding: 10%;
+}
+
+.nav-style{
+    color: white;
+    text-decoration: none;
+}
+
+.img-home{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}

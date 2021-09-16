@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
+
 import axios from "axios";
-import {Link} from "react-router-dom";
+
+
+//components
+import PokemonCard from "./PokemonCard";
 
 function PokemonList() {
-    const pokeStyle = {
-        color: "black",
-        textDecoration: "none",
-    };
 
     const [pokemons, setPokemons] = useState([]);
     const [pictures, setPictures] = useState([]);
@@ -44,15 +44,12 @@ function PokemonList() {
     return (
         <ul className='pokemon-list'>
             {pokemons.map((pokemon, index) => (
-                <li className='pokemon' key={index + 1}>
-
-                    <Link style={pokeStyle} to={`/pokemon/${index + 1}`}>
-                        <img className='img-list' src={pictures[index]} alt={pokemon.name}/>
-                        <h3>{pokemon.name}</h3>
-                        <p>{types[index]}</p>
-                    </Link>
-
-                </li>
+                <PokemonCard
+                    index={index}
+                    pictures={pictures}
+                    pokemon={pokemon}
+                    types={types}
+                />
             ))}
         </ul>
     );
