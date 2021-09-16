@@ -8,27 +8,32 @@ function PokemonList() {
         textDecoration: "none",
     };
 
-    const pictureLink = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
-
     const [pokemons, setPokemons] = useState([]);
     const [pictures, setPictures] = useState([]);
 
     useEffect(() => {
-        fetchPokemons()
+        fetchPokemons();
+
     }, [])
 
     const fetchPokemons = async () => {
         const pokes = await axios.get("https://pokeapi.co/api/v2/pokemon")
+        let pokeList = pokes.data.results;
 
-        console.log(pokes.data.results);
-        setPokemons(pokes.data.results);
+        setPokemons(pokeList);
+
+        for (let i = 0; i < pokeList.length; i++) {
+            fetchPokemon(pokeList[i].url);
+        }
     }
 
 
-    const fetchPokemon = async (id) => {
-        const poke = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    const fetchPokemon = async (url) => {
+        const poke = await axios.get(url);
+        let image = poke.data.sprites.other["official-artwork"].front_default;
 
-        console.log(poke.data.sprites.other["official-artwork"].front_default)
+        setPictures(state => [...state, image])
+
     }
 
 
@@ -36,9 +41,9 @@ function PokemonList() {
         <ul className='pokemon-list'>
             {pokemons.map((pokemon, index) => (
                 <li className='pokemon' key={index + 1}>
+
                     <Link style={pokeStyle} to={`/pokemon/${index + 1}`}>
-                        {/*<img src={pictures.index} alt={pokemon.name}/>*/}
-                        <img className='img-list' src={`${pictureLink}${index + 1}.png`} alt={pokemon.name}/>
+                        <img className='img-list' src={pictures[index]} alt={pokemon.name}/>
                         <h3>{pokemon.name}</h3>
                     </Link>
                 </li>
