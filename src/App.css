@@ -1,20 +1,27 @@
-.App {
-  /*text-align: center;*/
-  /*background-color: #27296f;*/
-  /*min-height: 100vh;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  /*font-size: calc(10px + 2vmin);*/
-  /*color: #fdd300;*/
+body {
+    background-color: #e7f3fa;
 }
 
-nav{
+.App {
+    /*text-align: center;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*font-size: calc(10px + 2vmin);*/
+    /*color: #fdd300;*/
+}
+
+
+.nav-pokeball {
+    display: grid;
+    grid-template-rows: auto auto 0;
+}
+
+nav {
     display: flex;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     align-items: center;
-    min-height: 10vh;
     background: firebrick;
     color: white;
     border-style: solid;
@@ -23,7 +30,7 @@ nav{
     border-bottom-color: black;
 }
 
-.nav-links{
+.nav-links {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -32,39 +39,89 @@ nav{
     font-size: x-large;
 }
 
-.pokemon-list{
-    text-align: center;
+.nav-bottom {
+    position: relative;
+    min-height: 10vh;
+    background: white;
+}
+
+.circle {
+    position: relative;
+    left: 50%;
+    top: -17vh;
+    display: inline-block;
+    height: 10vh;
+    width: 10vh;
+    background: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    border-radius: 50%;
+}
+
+.pokemon-list {
+    padding: 3%;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
 
-li.pokemon{
+.pokemon {
+    text-align: center;
     display: block;
     height: 200px;
-}
-
-img{
-    display: block;
-    height: 150px;
-}
-
-.pokemon{
+    margin: 7% auto;
     color: black;
     text-decoration: none;
     text-transform: capitalize
 }
 
-.type-list{
+.img-list {
+    display: block;
+    height: 80%;
+}
+
+.type-list {
     margin-top: 5%;
     text-align: center;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
 
-.type{
+.type {
     display: block;
     height: 70px;
     color: black;
     text-decoration: none;
     text-transform: capitalize
 }
+
+.pokemon-details {
+    padding: 3%;
+    display: grid;
+    grid-template-columns: min-content auto;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+}
+
+.img-details{
+
+}
+
+.text-details{
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+}
+
+.details{
+
+}
+
+
+.card {
+    background: var(--background-color);
+}
+

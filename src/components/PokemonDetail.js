@@ -21,9 +21,13 @@ function PokemonDetail({match}) {
 
     return (
         <div>
-            <div>
-                <img src={picture} alt={pokemon.name}/>
-                <p className='pokemon'>{pokemon.name}</p>
+            <div className="pokemon-details">
+                <img className="img-details" src={picture} alt={pokemon.name}/>
+                <div className="text-details">
+                    <h2>{pokemon.name}</h2>
+                    <div className="details"> </div>
+                </div>
+
             </div>
             <div>
 

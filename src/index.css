@@ -1,24 +1,139 @@
+:root {
+    --background-color: var(--neonwhite3);
+    --theme-color: var(--neonblue);
+    --neon-shadow: none;
+    --neon-shadow-hover: 0 0 30px var(--neonwhite);
+    --neon-border: none;
+    --button-color: var(--theme-color);
+    /*colors*/
+    --translucent: #00000000;
+    --black: #000000;
+    --black2: #00000080;
+    --neonwhite: #ffffff;
+    --neonwhite2: #ffffff60;
+    --neonwhite3: #ffffff10;
+    --neonyellow: #fffe92;
+    --neonyellow2: #fffe9280;
+    --neongreen: #35ff7d;
+    --neongreen2: #35ff7d80;
+    --neongreen3: #35ff7d15;
+    --neonblue: #21b5ff;
+    --neonblue2: #21b5ff80;
+    --neonpurple: #b05eff;
+    --neonpurple2: #b05eff80;
+    --neonpink: #ff19c9;
+    --neonpink2: #ff19c980;
+    --neonred: #ff1c6a;
+    --neonred2: #ff1c6a80;
+    --neonred3: #ff1c6a15;
+    --neonorange: #ff954a;
+    --neonorange2: #ff954a80;
+
+    /*types*/
+    --unknown: #ffffff;
+    --ghost: #854ea2;
+    --poison: #e080df;
+    --psychic: #e072bb;
+    --fairy: #f1b7d6;
+    --fighting: #de7968;
+    --dragon: #cc8e80;
+    --ground: #d5a574;
+    --fire: #f6cc9b;
+    --electric: #fff8b1;
+    --rock: #a29b77;
+    --normal: #e1d9bd;
+    --bug: #a1de90;
+    --grass: #a6e5cc;
+    --flying: #b7d4ff;
+    --steel: #96b8b8;
+    --water: #8fcade;
+    --ice: #b9e5ff;
+    --dark: #717f96;
+    --shadow: #646464;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.normal{
+    --background-color: var(--normal);
+}
+.fighting{
+    --background-color: var(--fighting);
+}
+.flying{
+    --background-color: var(--flying);
+}
+.poison{
+    --background-color: var(--poison);
+}
+.ground{
+    --background-color: var(--ground);
+}
+.rock{
+    --background-color: var(--rock);
+}
+.bug{
+    --background-color: var(--bug);
+}
+.ghost{
+    --background-color: var(--ghost);
+}
+.steel{
+    --background-color: var(--steel);
+}
+.fire{
+    --background-color: var(--fire);
+}
+.water{
+    --background-color: var(--water);
+}
+.grass{
+    --background-color: var(--grass);
+}
+.electric{
+    --background-color: var(--electric);
+}
+.psychic{
+    --background-color: var(--psychic);
+}
+.ice{
+    --background-color: var(--ice);
+}
+.dragon{
+    --background-color: var(--dragon);
+}
+.dark{
+    --background-color: var(--dark);
+}
+.fairy{
+    --background-color: var(--fairy);
+}
+.unknown{
+    --background-color: var(--unknown);
+}
+.shadow{
+    --background-color: var(--shadow);
 }
