@@ -128,7 +128,7 @@ nav {
 
 .card{
     background: var(--background-color);
-    border-radius: 20%;
+    border-radius: 20% 20% 40% 20%;
     padding: 10%;
 }
 
@@ -142,4 +142,27 @@ nav {
     margin-left: auto;
     margin-right: auto;
     width: 85%;
+}
+
+.button-load {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    border-radius: 25px;
+    background: firebrick;
+
+    position: relative;
+    left: 50%;
+    display: inline-block;
+    height: 4vh;
+    width: 15vh;
+}
+
+.button-load:active {
+    box-shadow: 0 0 5px -1px #000000B2;
+    background-color: #B22222AE;
+}
+
+.button-load:hover {
+    box-shadow: 0 0 5px -1px #00000099;
 }
