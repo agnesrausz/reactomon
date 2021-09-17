@@ -106,7 +106,8 @@ nav {
 }
 
 .img-details{
-
+    display: block;
+    height: 380px;
 }
 
 .text-details{
@@ -130,6 +131,13 @@ nav {
     background: var(--background-color);
     border-radius: 20% 20% 40% 20%;
     padding: 10%;
+}
+
+.card-details{
+    background: var(--background-color);
+    height: 100%;
+    border-radius: 20% 20% 40% 20%;
+    padding: 30px 15px;
 }
 
 .nav-style{

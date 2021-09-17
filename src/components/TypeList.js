@@ -3,10 +3,6 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 
 function TypeList() {
-    const pokeStyle = {
-        color: "black",
-        textDecoration: "none",
-    };
 
     const [pokeTypes, setPokeTypes] = useState([]);
 
