@@ -20,8 +20,10 @@ function TypeList() {
     return (
             <ul className='type-list'>
                 {pokeTypes.map((type, index) => (
-                    <li className={type.name + ' type card'} key={index + 1}>
+                    <li className={type.name + ' card-types type '} key={index + 1}>
+                        <h2>
                             {type.name}
+                        </h2>
                     </li>
                 ))}
             </ul>
